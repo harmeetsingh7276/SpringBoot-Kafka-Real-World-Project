@@ -11,7 +11,9 @@ public class WikiMediaData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Lob//Used this annotation since the wikimedia data is too large
+    //    @Lob//Used this annotation since the wikimedia data is too large
+//    @Column(columnDefinition = "CLOB")
+    @Column(columnDefinition = "TEXT", length = 10000)
     private String wikiEventData;
 
 }
