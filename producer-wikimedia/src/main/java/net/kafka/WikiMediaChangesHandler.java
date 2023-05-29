@@ -30,8 +30,8 @@ public class WikiMediaChangesHandler implements EventHandler {
     @Override
     public void onMessage(String s, MessageEvent messageEvent) throws Exception {
         //Whenever there is a new event in wikimedia this message is invoked
-        LOGGER.info(String.format("event data -> %s",messageEvent.getData()));
-        kafkaTemplate.send(topic,messageEvent.getData());
+        LOGGER.info(String.format("event data -> %s", messageEvent.getData()));
+        kafkaTemplate.send(topic, messageEvent.getData());
     }
 
     @Override
