@@ -19,7 +19,7 @@ public class WikiMediaChangesProducer {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    public void sendMessage() {
+    public void sendMessage() throws InterruptedException {
         String topic = "wikimedia_recent_change";
 
         //to read real time stream data from wikimedia we use event source
